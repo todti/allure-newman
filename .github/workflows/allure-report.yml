@@ -10,11 +10,11 @@ permissions: write-all
 
 jobs:
   autotests:
-    name: Run tests and generate Allure Report 
+    name: Run tests and generate Allure Report
     runs-on: ubuntu-latest
 
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         builder: ["npm", "yarn", "pnpm"]
         lang: ["js", "ts"]
@@ -29,16 +29,16 @@ jobs:
           node-version: 20
           cache: $
 
-      - name: Install 
+      - name: Install
         if: matrix.builder == 'npm'
         run: |
           npm install
 
-      - name: Install 
+      - name: Install
         if: matrix.builder == 'yarn'
         run: yarn install
 
-      - name: Install 
+      - name: Install
         if: matrix.builder== 'pnpm'
         run: pnpm install
 
