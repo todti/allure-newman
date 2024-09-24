@@ -5,9 +5,9 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"s@workspace:.":
+"l@workspace:.":
   version: 0.0.0-use.local
-  resolution: "s@workspace:."
+  resolution: "l@workspace:."
   dependencies:
     newman: "npm:^6.2.1"
     newman-reporter-allure: "npm:^3.0.1"

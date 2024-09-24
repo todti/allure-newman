@@ -1,3 +1,3 @@
 #!/bin/sh
-npm install
-npm run test
+yarn install
+yarn run test
