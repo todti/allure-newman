@@ -1,0 +1,14 @@
+{
+  "name": "s",
+  "type": "module",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test": "newman run tests/sample.json"
+  },
+  "devDependencies": {
+    "newman": "^6.2.1",
+    "newman-reporter-allure": "^3.0.1"
+  },
+  "packageManager": "yarn@4.5.0"
+}
