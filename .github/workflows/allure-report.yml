@@ -41,7 +41,6 @@ jobs:
         if: matrix.builder== 'pnpm'
         run: pnpm install
 
-      - name: Test
       - run: npm test
         continue-on-error: true
 
