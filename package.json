@@ -1,6 +1,5 @@
 {
-  "name": "s",
-  "type": "module",
+  "name": "l",
   "private": true,
   "version": "1.0.0",
   "scripts": {
@@ -9,6 +8,5 @@
   "devDependencies": {
     "newman": "^6.2.1",
     "newman-reporter-allure": "^3.0.1"
-  },
-  "packageManager": "yarn@4.5.0"
+  }
 }
