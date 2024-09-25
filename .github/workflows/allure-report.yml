@@ -10,7 +10,7 @@ permissions: write-all
 
 jobs:
   autotests:
-    name: Run tests and generate Allure Report
+    name: Run tests and generate Allure Report 
     runs-on: ubuntu-latest
 
     steps:
@@ -31,6 +31,9 @@ jobs:
           node-version: 20
           cache: yarn
 
+
+      - name: Install yarn
+        run: yarn install
 
       - run: yarn test
         continue-on-error: true
