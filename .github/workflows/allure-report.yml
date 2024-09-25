@@ -10,10 +10,17 @@ permissions: write-all
 
 jobs:
   autotests:
-    name: Run tests and generate Allure Report 
+    name: Run tests and generate Allure Report
     runs-on: ubuntu-latest
 
     steps:
+
+      - name: "Install project's dependencies"
+        run: |
+          corepack enable
+          yarn set version stable
+          yarn config set -H enableImmutableInstalls false
+          yarn install
 
       - name: Clone repository
         uses: actions/checkout@v4.1.7
@@ -24,9 +31,6 @@ jobs:
           node-version: 20
           cache: yarn
 
-
-      - name: Install yarn
-        run: yarn install
 
       - run: yarn test
         continue-on-error: true
