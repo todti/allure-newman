@@ -10,7 +10,7 @@ permissions: write-all
 
 jobs:
   autotests:
-    name: Run tests and generate Allure Report
+    name: Run tests and generate Allure Report 
     runs-on: ubuntu-latest
 
     steps:
@@ -21,13 +21,12 @@ jobs:
         uses: actions/setup-node@v4.0.4
         with:
           node-version: 20
-          cache: yarn
+          cache: pnpm
 
-      - name: Install yarn
-        run: yarn install
+      - name: Install pnpm
+        run: pnpm install
 
-      - name: Test
-        run: npm test
+      - run: pnpm test
         continue-on-error: true
 
       - name: Setup Allure History
