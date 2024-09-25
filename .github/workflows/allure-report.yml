@@ -10,7 +10,7 @@ permissions: write-all
 
 jobs:
   autotests:
-    name: Run tests and generate Allure Report 
+    name: Run tests and generate Allure Report
     runs-on: ubuntu-latest
 
     steps:
@@ -38,6 +38,11 @@ jobs:
       - run: yarn test
         continue-on-error: true
 
+      - name: Prepare Allure Results Directory
+        run: |
+          mkdir -p ./out/allure-results/history
+          mkdir -p allure-history/last-history
+
       - name: Setup Allure History
         uses: actions/checkout@v4.1.7
         if: always()
@@ -46,10 +51,6 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Prepare Allure Results Directory
-        run: |
-          mkdir -p ./out/allure-results/history
-          mkdir -p allure-history/last-history
 
       - name: Generate Allure Report
         uses: simple-elf/allure-report-action@v1.9
