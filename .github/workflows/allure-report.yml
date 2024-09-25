@@ -10,12 +10,13 @@ permissions: write-all
 
 jobs:
   autotests:
-    name: Run tests and generate Allure Report 
+    name: Run tests and generate Allure Report
     runs-on: ubuntu-latest
 
     steps:
-          uses: pnpm/action-setup@v2
-          with:
+      - name: Use pnpm
+        uses: pnpm/action-setup@v2
+        with:
           version: 8
 
       - name: Clone repository
