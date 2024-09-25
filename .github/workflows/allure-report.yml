@@ -10,14 +10,8 @@ permissions: write-all
 
 jobs:
   autotests:
-    name: Run tests and generate Allure Report 
+    name: Run tests and generate Allure Report
     runs-on: ubuntu-latest
-
-    strategy:
-      fail-fast: true
-      matrix:
-        builder: ["npm", "yarn", "pnpm"]
-        lang: ["js", "ts"]
 
     steps:
       - name: Clone repository
@@ -27,23 +21,13 @@ jobs:
         uses: actions/setup-node@v4.0.4
         with:
           node-version: 20
-          cache: 
+          cache: yarn
 
-      - name: Install 
-        if: matrix.builder == 'npm'
-        run: |
-          npm install
-
-      - name: Install 
-        if: matrix.builder == 'yarn'
+      - name: Install yarn
         run: yarn install
 
-      - name: Install 
-        if: matrix.builder== 'pnpm'
-        run: pnpm install
-
       - name: Test
-      - run: npm test
+        run: npm test
         continue-on-error: true
 
       - name: Setup Allure History

@@ -10,7 +10,7 @@ __metadata:
   resolution: "l@workspace:."
   dependencies:
     newman: "npm:^6.2.1"
-    newman-reporter-allure: "npm:^3.0.1"
+    newman-reporter-allure: "npm:^3.0.2"
   languageName: unknown
   linkType: soft
 
@@ -72,18 +72,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"allure-js-commons@npm:3.0.1":
-  version: 3.0.1
-  resolution: "allure-js-commons@npm:3.0.1"
+"allure-js-commons@npm:3.0.2":
+  version: 3.0.2
+  resolution: "allure-js-commons@npm:3.0.2"
   dependencies:
     md5: "npm:^2.3.0"
     properties: "npm:^1.2.1"
   peerDependencies:
-    allure-playwright: 3.0.1
+    allure-playwright: 3.0.2
   peerDependenciesMeta:
     allure-playwright:
       optional: true
-  checksum: 10c0/1b62608a429d3f74e2057f3b4a9c932489a0db4a60f36a34ee94bafa5f37dcb760a20da0bf01f40818fe6f90e2b44abfcc64d778a5219a273e3be364f4b5ae58
+  checksum: 10c0/cc71dffc8869d34bfabb72d409dd797ca92bf55f925fabc58662c435b0b1cc08788f7a9ccbb7be0153683dc3877cddf19a6a9a9aa349bf5927045bc142e99ac6
   languageName: node
   linkType: hard
 
@@ -659,17 +659,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"newman-reporter-allure@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "newman-reporter-allure@npm:3.0.1"
+"newman-reporter-allure@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "newman-reporter-allure@npm:3.0.2"
   dependencies:
-    allure-js-commons: "npm:3.0.1"
+    allure-js-commons: "npm:3.0.2"
   peerDependencies:
     newman: ">=3.5.0"
   peerDependenciesMeta:
     newman:
       optional: true
-  checksum: 10c0/dcf49f57002bc3fc57ceca8cab7d8a3d9b46d623e2e6fe5643e30129d88b4075f6fb0738e52ab05a244e8f6d050d7f4170199d0cbc26a2d1ae3c6588cf21054a
+  checksum: 10c0/d2ca60eaacc71deb56d09336dd2f9e477c4d147adfe9865122a4930f381500d5504ad25dcff5057bee982aa3a3a329dd4630f5915ca576063cc7bc3a49cf1549
   languageName: node
   linkType: hard
 
