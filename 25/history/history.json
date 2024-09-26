@@ -1,0 +1,1 @@
+{"1fc88e49bf2e774b35bb742937167156:f8aed53b8c74914c630e091a4d2bab93":{"statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1},"items":[{"uid":"40f05b45b17ee1c0","reportUrl":"https://todti.github.io/allure-newman/24//#testresult/40f05b45b17ee1c0","status":"passed","time":{"start":1727280723204,"stop":1727280723743,"duration":539}}]}}
