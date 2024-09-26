@@ -10,12 +10,10 @@ permissions: write-all
 
 jobs:
   autotests:
-    name: Run tests and generate Allure Report 
+    name: Run tests and generate Allure Report
     runs-on: ubuntu-latest
 
     steps:
-
-
       - name: Clone repository
         uses: actions/checkout@v4.2.0
 
@@ -24,7 +22,6 @@ jobs:
         with:
           node-version: 20
           cache: npm
-
 
       - name: Install npm
         run: npm install
@@ -40,10 +37,10 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Prepare Allure Results Directory
-        run: |
-          mkdir -p ./out/allure-results/history
-          mkdir -p allure-history/last-history
+#      - name: Prepare Allure Results Directory
+#        run: |
+#          mkdir -p ./out/allure-results/history
+#          mkdir -p allure-history/last-history
 
       - name: Generate Allure Report
         uses: simple-elf/allure-report-action@v1.9
