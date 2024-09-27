@@ -14,6 +14,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+          uses: pnpm/action-setup@v2
+          with:
+          version: 8
 
 
       - name: Clone repository
@@ -23,12 +26,13 @@ jobs:
         uses: actions/setup-node@v4.0.4
         with:
           node-version: 
-          cache: npm
+          cache: pnpm
 
 
-      - name: Install npm
+      - name: Install pnpm
+        run: pnpm install
 
-      - run: npm test
+      - run: pnpm test
         continue-on-error: true
 
       - name: Setup Allure History
