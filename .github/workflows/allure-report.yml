@@ -14,8 +14,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-          uses: pnpm/action-setup@v2
-          with:
+      - name: "Set pnpm"
+        uses: pnpm/action-setup@v2
+        with:
           version: 8
 
 
@@ -43,16 +44,11 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Prepare Allure Results Directory
-        run: |
-          mkdir -p ./out/allure-results/history
-          mkdir -p allure-history/last-history
-
       - name: Generate Allure Report
         uses: simple-elf/allure-report-action@v1.9
         if: always()
         with:
-          allure_results: ./out/allure-results
+          allure_results: allure-results
           allure_history: allure-history
 
       - name: Publish Allure Report
