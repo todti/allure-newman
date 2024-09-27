@@ -15,21 +15,27 @@ jobs:
 
     steps:
 
+      - name: "Install project's dependencies"
+        run: |
+          corepack enable
+          yarn set version stable
+          yarn config set -H enableImmutableInstalls false
+          yarn install
 
       - name: Clone repository
         uses: actions/checkout@v4.2.0
 
-      - name: Set up Node 20
+      - name: Set up Node 
         uses: actions/setup-node@v4.0.4
         with:
-          node-version: 20
-          cache: npm
+          node-version: 
+          cache: yarn
 
 
-      - name: Install npm
-        run: npm install
+      - name: Install yarn
+        run: yarn install
 
-      - run: npm test
+      - run: yarn test
         continue-on-error: true
 
       - name: Setup Allure History
