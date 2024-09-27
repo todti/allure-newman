@@ -1,17 +1,17 @@
 {
   "name": "l",
-  "type": "module",  
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "playwright test"
+  "test": "codeceptjs run --plugins allure"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.30.0",
-    "allure-playwright": "^3.0.2",
+    "codeceptjs": "^3.6.7",
+    "allure-codeceptjs": "^3.0.2",
     "allure-js-commons": "^3.0.2"
   }
 }
