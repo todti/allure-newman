@@ -15,12 +15,6 @@ jobs:
 
     steps:
 
-      - name: "Install project's dependencies"
-        run: |
-          corepack enable
-          yarn set version stable
-          yarn config set -H enableImmutableInstalls false
-          yarn install
 
       - name: Clone repository
         uses: actions/checkout@v4.2.0
@@ -29,13 +23,13 @@ jobs:
         uses: actions/setup-node@v4.0.4
         with:
           node-version: 20
-          cache: yarn
+          cache: npm
 
 
-      - name: Install yarn
-        run: yarn install
+      - name: Install npm
+        run: npm install
 
-      - run: yarn test
+      - run: npm test
         continue-on-error: true
 
       - name: Setup Allure History
@@ -46,16 +40,11 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Prepare Allure Results Directory
-        run: |
-          mkdir -p ./out/allure-results/history
-          mkdir -p allure-history/last-history
-
       - name: Generate Allure Report
         uses: simple-elf/allure-report-action@v1.9
         if: always()
         with:
-          allure_results: ./out/allure-results
+          allure_results: allure-results
           allure_history: allure-history
 
       - name: Publish Allure Report

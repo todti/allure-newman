@@ -1,14 +1,13 @@
 {
   "name": "l",
-  "type": "module",
+  "type": "module",  
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "test": "newman run tests/sample.json"
+    "test": "newman run tests/sample.json -r allure"
   },
   "devDependencies": {
     "newman": "^6.2.1",
     "newman-reporter-allure": "^3.0.2"
-  },
-  "packageManager": "yarn@4.5.0"
+  }
 }
