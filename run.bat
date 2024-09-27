@@ -1,3 +1,3 @@
 @echo off
-npm install && ^
-npm run test
+pnpm install && ^
+pnpm test

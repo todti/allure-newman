@@ -15,6 +15,7 @@
 The following software must be installed to run this project:
 
   - [Node.js](#nodejs) (version 14 or greater) - a JavaScript runtime environment.
+  - [Pnpm](#pnpm) - a package manager for Node.js.
 
 You will also need [Allure Report](#allure-report) to generate and open test reports.
 
@@ -34,6 +35,23 @@ Additionally, you might want to update npm to the latest version:
 ```shell
 npm install -g npm@latest
 ```
+
+### Pnpm
+
+If you have [Corepack](https://nodejs.org/api/corepack.html) enabled, pnpm
+should already be available to you. Otherwise, install pnpm by running:
+
+```shell
+npm install -g pnpm
+```
+
+To check if pnpm is available, run:
+
+```shell
+pnpm --version
+```
+
+If pnpm is available, the command will print its version.
 
 ### Allure Report
 
@@ -58,18 +76,18 @@ tests as many times as you want.
 
 ### Perform one-time setup
 
-Install the project's dependencies with npm:
+Install the project's dependencies with pnpm:
 
 ```shell
-npm install
+pnpm install
 ```
 
 ### Execute the tests
 
-Run the tests with npm:
+Run the tests with pnpm:
 
 ```shell
-npm run test
+pnpm test
 ```
 
 ### Use run.sh, or run.bat
