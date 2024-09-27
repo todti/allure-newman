@@ -1,18 +1,15 @@
 {
   "name": "l",
   "type": "module",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
   "scripts": {
-    "test": "playwright test"
+    "test": "node ./test/runner.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.30.0",
     "allure-js-commons": "^3.0.2",
-    "allure-playwright": "^3.0.2"
-  },
-  "packageManager": "yarn@4.5.0"
+    "allure-mocha": "^3.0.2",
+    "glob": "^11.0.0",
+    "mocha": "^10.7.3"
+  }
 }
